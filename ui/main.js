@@ -2,6 +2,12 @@ console.log('Loaded!');
 var element = document.getElementById('main-text');
 element.innerHTML = 'New VALue';
 var img = document.getElementById('goku');
+
+var marginLeft=0;
+function moveRight() {
+    marginLeft = marginLeft + 10;
+    img.style.marginLeft = marginLeft + 'px';
+}
 img.onclick = function() {
-    img.style.marginLeft = '100px';
+    var interval = setInterval(moveRight, 100);
 };
